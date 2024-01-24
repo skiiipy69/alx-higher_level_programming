@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Define a class Square."""
+
+
 class Square:
     """A class that defines a square by size, which defaults 0.
     Square can also get area, and print square using '#'.
@@ -13,7 +15,7 @@ class Square:
 
     @size.setter
     def size(self, size):
-        if type(size) != int:
+        if not isinstance(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")

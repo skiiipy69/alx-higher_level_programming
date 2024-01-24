@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Define a class Square."""
+
+
 class Square:
     """A class that defines a square by size, which defaults 0.
     Also defines position using a tuple, which defaults (0, 0).
@@ -16,7 +18,7 @@ class Square:
 
     @size.setter
     def size(self, size):
-        if type(size) != int:
+        if not isinstance(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
@@ -28,8 +30,8 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if type(value) != tuple or len(value) != 2 or \
-           not all([type(i) == int for i in value]) or \
+        if not isinstance(value) != tuple or len(value) != 2 or \
+           not all([not isinstance(i) == int for i in value]) or \
            not all([i >= 0 for i in value]):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
