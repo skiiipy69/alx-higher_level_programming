@@ -1,2 +1,2 @@
--- Lists all databases of my MySQL server.
-SHOW DATABASES;
+-- Deletes the database hbtn_0c_0 from my MySQL server.
+DROP DATABASE IF EXISTS `hbtn_0c_0`;
