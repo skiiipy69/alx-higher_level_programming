@@ -1,3 +1,9 @@
--- lists all cities contained in the database hbtn_0d_usa
--- lists all rows of a particular column in a database
-SELECT cities.id, cities.name, states.name FROM cities LEFT JOIN states ON states.id = cities.state_id ORDER BY cities.id;
+-- Write a script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
+
+SELECT tv_shows.title, tv_show_genres.genre_id
+    FROM tv_genres
+    JOIN tv_show_genres
+    JOIN tv_shows
+    ON tv_shows.id = show_id
+    AND tv_genres.id = genre_id
+    ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
